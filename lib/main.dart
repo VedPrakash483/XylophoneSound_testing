@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'audioplayer.dart';
 
 void main() => runApp(XylophoneApp());
 
@@ -12,6 +13,9 @@ class XylophoneApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {
+        '/secondpage': (context) => AudioPlayerWidget(url: url, start: , end: end),
+      },
       home: Scaffold(
         backgroundColor: Colors.black,
         body: SafeArea(
@@ -23,7 +27,7 @@ class XylophoneApp extends StatelessWidget {
                   color: Colors.red,
                   child: GestureDetector(
                     onTap: () async {
-                      playsound(1);
+                      //link the page here
                     },
                   ),
                 ),
